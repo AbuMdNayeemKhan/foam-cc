@@ -1,0 +1,211 @@
+// Responsive for mobile device
+@media (max-width: 600px){
+    .header{
+        &-navbar{
+            &-logo{
+                z-index: 12;
+            }
+            &-nav{
+                display: block;
+                &-menu{
+                    padding: 0;
+                    position: fixed;
+                    top: 50px;
+                    left: -100%;
+                    gap: 0;
+                    flex-direction: column;
+                    background-color: #262626;
+                    width: 100%;
+                    text-align: center;
+                    transition: 0.3s;
+                    min-height: 100vh;
+                    z-index: 6;
+                    &.active{
+                        left: 0;
+                    }
+                    &-item{
+                        margin: 16px 0;
+                    }
+                }
+            }
+            &-hamburger{
+                display: block;
+                z-index: 12;
+                &.active{
+                    .header-navbar-hamburger-bar:nth-child(2){
+                        opacity: 0;
+                    }
+                    .header-navbar-hamburger-bar:nth-child(1){
+                        transform: translateY(8px) rotate(45deg);
+                    }
+                    .header-navbar-hamburger-bar:nth-child(3){
+                        transform: translateY(-8px) rotate(-45deg);
+                    }
+                }
+                
+            }
+        }
+    }
+    .hero{
+        &-slider{
+            &-item{
+                padding: 10px;
+                // height: 30vh;
+                & h1{
+                    font-size: 30px;
+                }
+                & p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+    // Footer section style start
+    .footer{
+        &-top{
+            &-logo{}
+            &-address{}
+            &-email{}
+            &-phone{}
+            &-icon{
+                &-nav{
+                    &-item{
+                        margin-top: 20px;
+                        & a{
+                        }
+                    }
+                }
+            }
+        }
+        &-bottom{
+            flex-direction: column-reverse;
+            align-items: center;
+            &-coder{}
+            &-copyright{
+                
+            }
+        }
+    }
+    
+    // Footer section style end
+    
+    // Service section style start
+    .service{
+    
+        &-item{
+            &-card{
+                & .card{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    // Service section style end
+    
+    // Team section style start
+    .team{
+    
+        &-member{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            & .card{
+                width: 100%;
+            }
+            & li:hover{
+    
+            }
+            &-icon{
+    
+            }
+        }
+    }
+    // Team section style end
+    
+    // Product section start
+    .product{
+        &-item{
+            &-card{
+                & .card{
+                    width:100%;
+                }
+            }
+        }
+    }
+    // Product section end
+
+
+    // Portfolio section style start
+.portfolio{
+    padding-top: 90px;
+    &-nav{
+        &-menu{
+            display: flex;
+            justify-content: center;
+            gap: 33px;
+            &-item{
+                list-style-type: none;
+                transition: 0.7s ease;
+                font-size: 22px;
+                margin: 20px 0;
+                &:hover{
+                    color: dodgerblue;
+                }
+            }
+        }
+    }
+    &-card{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+        &-item{
+            display: none;
+            &.active{
+                display: block;
+            }
+            &:hover &-overlay{
+                top: 0;
+            }
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            & img{
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            &-overlay{
+                position: absolute;
+                top:100%;
+                left: 0;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                transition: 0.3s;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: #333;
+                    opacity: 0.77;
+                    color: #ffffff;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+// Portfolio section style end
+}
